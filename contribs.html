@@ -1,0 +1,148 @@
+<!-- Resource Style: style="background-color: #e0a6a6;" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Bootstrap Template</title>
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a href="./index.html" class="nav-item nav-link">Home</a>
+            <a href="./coursework.html" class="nav-item nav-link">Coursework</a>
+            <a href="./projects.html" class="nav-item nav-link">Projects</a>
+            <a href="./contribs.html" class="nav-item nav-link active">Contributions</a>
+            <a href="./Zaid Resume Jun21.pdf" class="nav-item nav-link">Resume</a>
+        </div>
+    </div>
+</nav>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Merriweather', sans-serif !important;
+            background-color: #c9d4cb;
+        }
+        .card-header {
+            background-color: #e3e3e3;
+        }
+        .card-body {
+            background-color: #e9e9e9;
+        }
+        .scroll {
+            color: #fff;
+            margin-top: 100px
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: #2a302a;
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            bottom: var(--cd-back-to-top-margin);
+            right: 20px;
+            right: var(--cd-back-to-top-margin);
+            display: inline-block;
+            height: 40px;
+            height: var(--cd-back-to-top-size);
+            width: 40px;
+            width: var(--cd-back-to-top-size);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+            background-color: hsla(5, 76%, 62%, .8);
+            background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+        }
+    </style>
+    <script>
+$(document).ready(function() {
+$(window).scroll(function() {
+if ($(this).scrollTop() > 20) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut();
+}
+});
+
+$('#toTopBtn').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 1000);
+return false;
+});
+});
+    </script>
+    <br>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+    <div class="container">
+        <div class="row">
+            <h2>My Contributions to Berkeley, and Beyond</h2>
+        </div>
+    </div>
+    <style>
+        .courses {
+            margin: 20px;
+        }
+        .carousel {
+            background: #829c90;
+            max-height: 10%;
+        }
+        .carousel-item {
+            text-align: center;
+        }
+        .carousel .item img {
+            max-height: 20%;
+            min-width: auto;
+        }
+        .carousel-inner > .item {
+            height: 400px;
+        }
+
+    </style>
+    </head>
+    <body>
+    <div id="con1" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container border py-3 my-3" style="background-color: #829c90;">
+                    <img src="img/d8.png" height="64" style="float: left; margin: 5px;">
+                    <h1>Data 8 Staff</h1>
+                    <p><b>Timeframe: January 2021-Present</b></p>
+                    After enjoying and excelling in Data 8 in Fall 2020, I sought to get involved with the course staff. In Spring 2021 I served as an Academic Intern, whereby I assisted students during their lab sections and gained valuable advice from senior student instructors. Following that experience, I was appointed to be a Tutor in Fall 2021. This entails leading a small-group tutoring section, grading assignments, and supervising Office Hours. Once the semester starts I will be uploading my teaching resources here.
+                </div>   
+            </div> 
+        </div>
+        <b><i>More coming soon!</i></b>
+    </div>
+    
+</body>
+</html>

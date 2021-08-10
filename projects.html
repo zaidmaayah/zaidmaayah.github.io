@@ -1,0 +1,202 @@
+<!-- Resource Style: style="background-color: #e0a6a6;" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Basic Bootstrap Template</title>
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+        </div>
+        <div class="navbar-nav ml-auto">
+            <a href="./index.html" class="nav-item nav-link">Home</a>
+            <a href="./coursework.html" class="nav-item nav-link">Coursework</a>
+            <a href="./projects.html" class="nav-item nav-link active">Projects</a>
+            <a href="./contribs.html" class="nav-item nav-link">Contributions</a>
+            <a href="./Zaid Resume Jun21.pdf" class="nav-item nav-link">Resume</a>
+        </div>
+    </div>
+</nav>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Merriweather', sans-serif !important;
+            background-color: #c9d4cb;
+        }
+        .card-header {
+            background-color: #e3e3e3;
+        }
+        .card-body {
+            background-color: #e9e9e9;
+        }
+        .scroll {
+            color: #fff;
+            margin-top: 100px
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: #2a302a;
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            bottom: var(--cd-back-to-top-margin);
+            right: 20px;
+            right: var(--cd-back-to-top-margin);
+            display: inline-block;
+            height: 40px;
+            height: var(--cd-back-to-top-size);
+            width: 40px;
+            width: var(--cd-back-to-top-size);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+            background-color: hsla(5, 76%, 62%, .8);
+            background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+        }
+    </style>
+    <script>
+$(document).ready(function() {
+$(window).scroll(function() {
+if ($(this).scrollTop() > 20) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut();
+}
+});
+
+$('#toTopBtn').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 1000);
+return false;
+});
+});
+    </script>
+    <br>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+    <div class="container">
+        <div class="row">
+            <h2>Personal Projects</h2>
+        </div>
+    </div>
+    <style>
+        .courses {
+            margin: 20px;
+        }
+        .carousel {
+            background: #829c90;
+            max-height: 10%;
+        }
+        .carousel-item {
+            text-align: center;
+        }
+        .carousel .item img {
+            max-height: 20%;
+            min-width: auto;
+        }
+        .carousel-inner > .item {
+            height: 400px;
+        }
+
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <p>These projects were mostly or entirely self-directed. For Berkeley-related things, visit the Contributions page.</p>
+        </div>
+    </div>
+    <div class="container-lg my-3">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h2><a href="#proj1"><font color="black">DT SalePoint</font></a></h2>
+                    <p><i>A web portal and Java app designed to streamline food sales at my high school.</i></p>
+                    <img src="img/DT Sale 1.jpg" alt="First Slide">
+                </div>
+                <div class="carousel-item">
+                    <h2><a href="#proj2"><font color="black">Job Title Matcher</font></a></h2>
+                    <p><i>A compilation of text classification algorithms used to help predict job titles from posts and resumes.</i></p>
+                    <img src="img/Picture1.png" alt="Second Slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    
+    <div id="proj1" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container border py-3 my-3" style="background-color: #829c90;">
+                    <h1>DT SalePoint</h1>
+                    <p><b>Timeframe: March 2019-January 2020</b></p>
+                    <p><b>Languages Used: HTML, PHP, CSS, JavaScript, Java, SQL</b></p>
+                    Plenty of clubs and organizations at my high school would host food sales throughout the year as their primary means of raising funds. Queues would be long and many students would often miss out on the opportunity to get food. With this in mind, I proposed implementing a system to allow students to preorder food. The system was split into a web app for preordering and a local Java app for the actual point of sale.
+                    <br>
+                    <br>
+                    Students would pay an in-person vendor a week before the event, then the vendor would fill a form on the web app to push their order data to MySQL. The system would also tally up the total revenue and quantity of food items required to satisfy every student's order. On the day of a sale, we would download the database as a CSV file to have an offline copy. When a student came to claim their order, the Java app was able to instantly look up what they ordered, reducing wait times and keeping the event streamlined.
+                    <br>
+                    <br>
+                    I debuted this project a local technology fair in 2019 and trained club representatives on how to use the system. Unfortunately, I was not able to see its long-term impacts due to the pandemic, but as my first foray into full-stack software engineering I found it very rewarding.
+                </div>   
+            </div> 
+        </div>
+    </div>
+    <div id="proj2" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container border py-3 my-3" style="background-color: #829c90;">
+                    <h1>Job Title Matcher</h1>
+                    <p><b>Timeframe: July-November 2019</b></p>
+                    <p><b>Languages Used: Python (pandas and sklearn)</b></p>
+                    This project was birthed from an internship with a local employment search company, who were hoping to tackle the problem of predicting what job title most closely matches an employer's job post or a job seeker's resume. The main challenges lied in the ambiguity/vagueness of some job titles in English and the fact that many users of the site are not native English speakers (mainly Arabic, Hindi, and Urdu).
+                    <br>
+                    <br>
+                    I started with a simple bag-of-words TF-IDF approach as a baseline. I calculated the statistic for every possible word-document pair and used a weighted sum to rank the nearest match to a particular job title. I then moved into more rigorous classifiers such as Logistic Regression, Naive Bayes, Support Vectors, and Decision Trees. I later applied grid search and hyperparameter tuning with the goal of improving my accuracy.
+                    <br>
+                    <br>
+                    Later after the internship, I wrote my International Baccalaureate Extended Essay about some of my findings. I conducted more in-depth research on bag-of-words algorithms and ran more experiments on the same data from earlier using relatively simpler classifiers. 
+                </div>   
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
